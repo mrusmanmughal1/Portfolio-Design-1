@@ -1,22 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
- 
-.main{
-    padding:20px;
-    border: 10px solid black;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.main-bg{
+ border-radius:    100% 0% 22% 78% / 100% 50% 50% 0% ;
+}
+@layer components{
+    .btn_shadow{
+        @apply px-8 py-4 rounded-full hover:shadow-slate-500 hover:shadow-lg transition-all duration-700
+    }
+}
+.main-notes{
+    animation: move 5s infinite;
+}
 
- }  
- .box{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border: 5px solid black ;
- }
+@keyframes move {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+  
