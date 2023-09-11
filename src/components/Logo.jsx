@@ -1,6 +1,7 @@
+import logo from '../assets/logo.png'
 const Logo = () => {
   return (
-    <h1 className="text-2xl">Logo</h1>
+   <img src={logo} alt="" className='w-10' />
   )
 }
 
