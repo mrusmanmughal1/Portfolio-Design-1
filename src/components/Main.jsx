@@ -10,12 +10,12 @@ const Main = () => {
     <div className="flex h-screen">
       <div className=" w-[70%] flex flex-col gap-4 align-middle justify-center">
         <p className="text-2xl font-semibold flex gap-4">
-          {" "}
-          <img src={hand} alt="hello hand" /> HELLO , I AM{" "}
+           
+          <img src={hand} alt="hello hand" /> HELLO , I AM 
         </p>
         <p className="font-bold text-8xl text-bluecolor">MUHAMAMD  USMAN</p>
         <p className="text-4xl font-semibold uppercase ">
-          {" "}
+           
           Freelance "
           <i id="typewriter" className="text-bluecolor font-bold">
             {text}
