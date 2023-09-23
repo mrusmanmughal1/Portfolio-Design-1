@@ -15,7 +15,7 @@ const Header = () => {
             <li className="header-li"><a href="#skills">Resume </a></li>
             <li className="header-li"><a href="#Services">Services </a></li> 
             <li className="header-li"><a href="#Projects">Work</a></li>
-            <li className="header-li"><a href="#contact-form">Contact</a></li>
+            <li className="header-li"><a href="#contact-form"> Contact</a></li>
           </ul>
         </nav>
         <div className="flex items-center gap-4">
