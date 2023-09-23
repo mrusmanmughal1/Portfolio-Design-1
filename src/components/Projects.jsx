@@ -4,12 +4,12 @@ const Projects = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
   return (
     <section className="py-16 " id="Projects">
-      <div className="text-center pb-16 text-6xl font-bold text-blue-950 ">
+      <div className="text-center pb-16 md:text-6xl text-3xl font-bold text-blue-950 ">
         <p className="titles pb-2"> Latest Projects</p>
       </div>
       <div className=" ">

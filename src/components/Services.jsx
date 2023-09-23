@@ -26,8 +26,8 @@ const Services = () => {
     }
 ]
   return (
-    <section className="py-16" id="Services">
-        <div className="text-center pb-16 text-6xl font-bold text-blue-950">
+    <section className="md:py-16 py-10 " id="Services">
+        <div className="text-center md:pb-16  pb-8 md:text-6xl text-3xl font-bold text-blue-950">
         <h1 className="titles pb-2"> Services </h1>
         </div>
         <div className="flex justify-center gap-4 flex-wrap ">

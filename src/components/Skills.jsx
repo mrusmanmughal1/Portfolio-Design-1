@@ -80,13 +80,13 @@ const Experience = [
 ];
 const Skills = () => {
   return (
-    <section id="skills" className="pb-16">
+    <section id="skills" className="md:pb-16 pb-8">
       <div className="pt-16">
-        <div className="text-center pb-16 text-6xl font-bold text-blue-950  ">
+        <div className="text-center md:pb-16 pb-8 md:text-6xl text-3xl  font-bold text-blue-950  ">
           <h1 className="titles pb-2">Skills & Experience</h1>
         </div>
-        <div className="flex ">
-          <div className="w-1/2 flex flex-wrap gap-10 text-center items-center ">
+        <div className="flex md:flex-row flex-col">
+          <div className="md:w-1/2 flex flex-wrap md:gap-10  gap-8 justify-center md:mb-0 mb-16 text-center items-center ">
             {icons.map((val, i) => {
               const { icon, color, text, bgcolor, Text } = val;
               return (
@@ -96,7 +96,7 @@ const Skills = () => {
                 >
                   {" "}
                   <div
-                    className={` shadow-md rounded-full px-8 py-4 flex flex-col  items-center bg-[${bgcolor}]`}
+                    className={` shadow-md rounded-full px-8 py-4 flex flex-col border-2 items-center bg-[${bgcolor}]`}
                   >
                     <i className={`text-6xl ${color}`}>{icon}</i>
                     <p className="font-semibold text-lg">{text}</p>
@@ -106,8 +106,8 @@ const Skills = () => {
               );
             })}
           </div>
-          <div className="w-1/2">
-            <div className="flex flex-col gap-10">
+          <div className="md:w-1/2 " >
+            <div className="flex flex-col px-8 gap-10">
               {Experience.map((val, i) => {
                 const { duration, Company, designation, year } = val;
                 return (
@@ -116,7 +116,7 @@ const Skills = () => {
                       {year}
                     </div>
                     <div>
-                      <h1 className="font-bold text-slate-900 text-2xl">
+                      <h1 className="font-bold text-slate-900 md:text-2xl ">
                         {designation}
                       </h1>
                       <p className="text-slate-500">{Company}</p>
