@@ -30,7 +30,7 @@ const Services = () => {
         <div className="text-center md:pb-16  pb-8 md:text-6xl text-3xl font-bold text-blue-950">
         <h1 className="titles pb-2"> Services </h1>
         </div>
-        <div className="flex justify-center gap-4 flex-wrap ">
+        <div className="flex justify-center gap-8 md:gap-4 flex-wrap ">
                 { Services.map((val,i)=>{
                     const {  title, Descrption}=val;
                     return (

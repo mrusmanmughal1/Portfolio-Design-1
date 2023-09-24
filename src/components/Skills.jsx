@@ -5,8 +5,8 @@ import {
   BiLogoJavascript,
   BiLogoBootstrap,
 } from "react-icons/bi";
-import { AiFillGithub } from "react-icons/ai";
-
+import {BiLogoTailwindCss,BiLogoNodejs} from "react-icons/bi"
+import{FaShopify} from "react-icons/fa"
 const icons = [
   {
     icon: <AiFillHtml5 />,
@@ -37,17 +37,32 @@ const icons = [
     Text: "REACT JS ",
   },
   {
+    icon: <BiLogoNodejs />,
+    text: "60%",
+    color: "text-node",
+    bgcolor: "#D1F8FF",
+    Text: "Node  JS ",
+  },
+  {
+    icon: <BiLogoTailwindCss />,
+    text: "90%",
+    color: "text-react",
+    bgcolor: "#D1F8FF",
+    Text: "Tailwind Css ",
+  },
+
+  {
     icon: <BiLogoBootstrap />,
     text: "90%",
     color: "text-black",
     Text: "BOOTSTRAP",
   },
   {
-    icon: <AiFillGithub />,
+    icon: <FaShopify />,
     text: "70%",
-    color: "bg-gray-100",
+    color: "text-node",
     bgcolor:"#687920",
-    Text: "GITHUB",
+    Text: "Shopify ",
   },
 ];
 
@@ -86,7 +101,7 @@ const Skills = () => {
           <h1 className="titles pb-2">Skills & Experience</h1>
         </div>
         <div className="flex md:flex-row flex-col">
-          <div className="md:w-1/2 flex flex-wrap md:gap-10  gap-8 justify-center md:mb-0 mb-16 text-center items-center ">
+          <div className="md:w-1/2 flex flex-wrap md:gap-8  gap-8 justify-center md:mb-0 mb-16 text-center items-center ">
             {icons.map((val, i) => {
               const { icon, color, text, bgcolor, Text } = val;
               return (
@@ -111,7 +126,7 @@ const Skills = () => {
               {Experience.map((val, i) => {
                 const { duration, Company, designation, year } = val;
                 return (
-                  <div key={i} className="flex justify-between items-center">
+                  <div key={i} className="flex justify-between items-start">
                     <div className="text-bluecolor font-semibold text-2xl">
                       {year}
                     </div>

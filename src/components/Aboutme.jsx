@@ -8,7 +8,7 @@ const Aboutme = () => {
            <h1 className="titles "> About Me </h1>  
         </div>
         <div className=" gap-10 sm:flex md:flex-row lg:flex-row  justify-center ">
-          <div className="md:w-1/2 p-6">
+          <div className="md:w-1/2  px-2 md:p-16">
             <img src={Img} alt="" />
           </div>
           <div className="md:w-1/2 flex flex-col gap-5 px-8"> 
@@ -21,7 +21,7 @@ const Aboutme = () => {
             <br />
           I like work with new people. New people new Experiences.
             </div>
-            <div className="flex justify-between text-blue-950">
+            <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between  text-blue-950">
               <div className="font-semibold">
                 <h1 >Phone :</h1>
                 <p>+92 304 9513443 </p>                

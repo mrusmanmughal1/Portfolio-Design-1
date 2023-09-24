@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import mail from "../assets/email.png";
 import phone from "../assets/phone.png";
+import { ModeContext } from "../Context/ModeContext";
 const ContactForm = () => {
+const {mode} = useContext(ModeContext);
+const black = mode ? "bg-black": '';
+
   return (
     <section className="py-16" id="contact-form">
-      <div className="text-center pb-16 md:text-5xl text-2xl  font-bold text-blue-950 ">
+      <div className="text-center pb-16 md:text-5xl text-3xl  font-bold text-blue-950 ">
         <h1 className="titles">Take a Coffee & chat with me</h1>
       </div>
       <div className="flex md:flex-row flex-wrap items-center justify-center gap-8 text-gray-700 font-semibold">
@@ -15,30 +20,33 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="flex justify-center   py-10 ">
-        <form className="md:w-2/3 w-full px-4">
-          <div className=" flex md:flex-row flex-col  border justify-between w-full">
+        <form className="md:w-2/3 w-full px-4 ">
+          <div className=" flex md:flex-row flex-col    justify-between w-full">
             <input
               type="text"
               placeholder="Your Name"
-              className=" border-b-2 pt-10 pb-5 w-full ps-5 outline-none"
-            />
+              className={`${black} rounded-2xl  border-b-2 pt-10 pb-5 w-full ps-2 outline-none`}            />
             <input
               type="text"
               placeholder="Email Address"
-              className=" border-b-2 md:mx-10 w-full pt-10 pb-5 ps-5 outline-none"
+              className={`${black} rounded-2xl border-b-2 md:mx-10 w-full pt-10 pb-5 ps-2 outline-none`}
             />
           </div>
           <input
             type="text"
             placeholder="Subject"
-            className="w-full border-b-2 outline-none  ps-5 pt-10 pb-5"
+            className={`w-full border-b-2 outline-none  ps-2 pt-10 pb-5 ${black} rounded-2xl`}
           />
           <div>
-            <input
+            <textarea
               type="textarea"
+              rows="4" cols="50"
               placeholder="Your Message here"
-              className="w-full border-b-2 outline-none  ps-5 pt-10 pb-5"
+              className={`w-full border-b-2 outline-none  ps-2 pt-10 pb-5 ${black} rounded-2xl`}
             />
+          </div>
+          <div className="flex justify-center py-6 w-full">
+            <button className="bg-bluecolor px-10 font-semibold py-4 text-white rounded-full"> SEND QUERY  </button>
           </div>
         </form>
       </div>
