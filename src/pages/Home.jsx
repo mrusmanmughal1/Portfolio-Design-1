@@ -8,6 +8,7 @@ import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Projects from "./../components/Projects";
 import  {ModeContext}  from "../Context/ModeContext";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
 const {mode} = useContext(ModeContext);
@@ -18,10 +19,11 @@ const {mode} = useContext(ModeContext);
         <div className="md:w-[90%] sm:w-[100%] mx-auto ">
           <HeaderMain  />
           <div id={`${mode ? "dark" :''}` }>
-          <Aboutme />
-          <Skills />
+          <Aboutme mode={mode} />
+          <Skills mode={mode} />
           <Services />
           <Projects />
+          <Testimonials/>
           <ContactForm />
           <Footer />
           </div>

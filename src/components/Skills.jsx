@@ -54,7 +54,7 @@ const icons = [
   {
     icon: <BiLogoBootstrap />,
     text: "90%",
-    color: "text-black",
+    color: "text-bootstrap",
     Text: "BOOTSTRAP",
   },
   {
@@ -69,31 +69,31 @@ const icons = [
 const Experience = [
   {
     year: 2023,
-    designation: "React js/Shopify Developer",
+    designation: "React js / Shopify Developer         ",
     Company: "Ormox ",
-    duration: "1years",
+    duration: "1year",
   },
  
   {
     year: 2021,
-    designation: "Software Engineer (Reactjs)",
+    designation: "Software Engineer ( Reactjs )",
     Company: "Netsol Technologies Ltd",
-    duration: "1years",
+    duration: "1year",
   },
   {
     year: 2022,
     designation: "Associate Software Engineer",
     Company: "Smart Moves Lab ",
-    duration: "1years",
+    duration: "1year",
   },
   {
     year: 2020,
     designation: "Front End Developer (internee)",
     Company: "Pakistan IT Solutions",
-    duration: "1years",
+    duration: "1year",
   },
 ];
-const Skills = () => {
+const Skills = ({mode}) => {
   return (
     <section id="skills" className="md:pb-16 pb-8">
       <div className="pt-16">
@@ -122,16 +122,16 @@ const Skills = () => {
             })}
           </div>
           <div className="md:w-1/2 " >
-            <div className="flex flex-col px-8 gap-10">
+            <div className="flex flex-col px-8 gap-10 ">
               {Experience.map((val, i) => {
                 const { duration, Company, designation, year } = val;
                 return (
-                  <div key={i} className="flex justify-between items-start">
-                    <div className="text-bluecolor font-semibold text-2xl">
+                  <div key={i} className="flex justify-between md:items-start items-center text-sm md:text-2xl ">
+                    <div className="text-bluecolor font-semibold ">
                       {year}
                     </div>
                     <div>
-                      <h1 className="font-bold text-slate-900 md:text-2xl ">
+                      <h1 className={`${mode ? 'text-white':"text-slate-900"} font-bold   pt-4 md:pt-0 `}>
                         {designation}
                       </h1>
                       <p className="text-slate-500">{Company}</p>

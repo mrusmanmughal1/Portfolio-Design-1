@@ -15,22 +15,22 @@ const Projects = () => {
       <div className=" ">
         <div> 
           <Slider {...settings}>
-            <div >
+            <div className="rounded-full">
                <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>  
             </div>
-            <div>
+            <div className="rounded-full">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
-            <div>
+            <div className="rounded-full">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
-            <div>
+            <div className="rounded-full">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
-            <div>
+            <div className="rounded-full">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
-            <div>
+            <div className="rounded-full">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
           </Slider>

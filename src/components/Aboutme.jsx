@@ -1,6 +1,6 @@
 import Img from "../assets/aboutme.png"
 import Icons from "./Icons";
-const Aboutme = () => {
+const Aboutme = ({mode}) => {
   return (
     <section id="about-me" className="py-16">
       <div>
@@ -11,7 +11,7 @@ const Aboutme = () => {
           <div className="md:w-1/2  px-2 md:p-16">
             <img src={Img} alt="" />
           </div>
-          <div className="md:w-1/2 flex flex-col gap-5 px-8"> 
+          <div className="md:w-1/2 flex flex-col gap-5 px-8 md:py-0 pt-10"> 
             <div className="text-xl font-semibold text-bluecolor tracking-widest">MY INTRO</div>
             <div className="text-4xl text-blue-950">I am <span className="md:text-6xl text-4xl font-semibold"> M Usman, </span></div>
             <div className="md:text-2xl text-lg text-slate-600 ">A Front End Developer Based in Pakistan</div>
@@ -21,7 +21,7 @@ const Aboutme = () => {
             <br />
           I like work with new people. New people new Experiences.
             </div>
-            <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between  text-blue-950">
+            <div className={`flex flex-col gap-2 md:gap-0 md:flex-row justify-between   ${mode ? "text-white":'text-blue-950'}`}>
               <div className="font-semibold">
                 <h1 >Phone :</h1>
                 <p>+92 304 9513443 </p>                

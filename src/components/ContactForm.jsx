@@ -4,18 +4,18 @@ import phone from "../assets/phone.png";
 import { ModeContext } from "../Context/ModeContext";
 const ContactForm = () => {
 const {mode} = useContext(ModeContext);
-const black = mode ? "bg-black": '';
+const black = mode ? "bg-black": 'bg-transparent text-black';
 
   return (
-    <section className="py-16" id="contact-form">
-      <div className="text-center pb-16 md:text-5xl text-3xl  font-bold text-blue-950 ">
-        <h1 className="titles">Take a Coffee & chat with me</h1>
+    <section  id="contact-form">
+      <div className="text-center pb-16 md:text-5xl text-3xl py-16 font-bold text-blue-950 ">
+        <h1 className="titles px-3">Take a Coffee & chat with me</h1>
       </div>
-      <div className="flex md:flex-row flex-wrap items-center justify-center gap-8 text-gray-700 font-semibold">
-        <div className="flex items-center gap-5 md:text-2xl text-lg bg-[#F9D9FD] px-4 py-4 rounded-xl">
-          <img src={mail} alt="" /> mrusmanmughal1@gmail.com
+      <div className="flex md:flex-row flex-wrap items-center justify-center gap-8 text-gray-700 font-semibold px-5 md:text-2xl text-sm">
+        <div className="flex items-center gap-5  bg-[#F9D9FD] px-4 py-4 rounded-xl">
+          <img src={mail} alt="" /> mrusmanmughal1 @gmail.com
         </div>
-        <div className="flex items-center gap-5 text-2xl bg-[#D1E4FC] px-14 py-4 rounded-xl">
+        <div className="flex items-center gap-5  bg-[#D1E4FC] px-14 py-4 rounded-xl">
           <img src={phone} alt="" /> +92 304 9513443
         </div>
       </div>

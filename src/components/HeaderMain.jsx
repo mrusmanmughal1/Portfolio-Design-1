@@ -7,7 +7,7 @@ const HeaderMain = () => {
 const {mode} = useContext(ModeContext);
 
   return (
-    <div className={`${mode ? "darkmode text-white" :"header-main"}`}>
+    <div className={`${mode ? "darkmode text-white  md:h-screen  h-auto   " :"header-main md:h-screen  h-auto  "}`}>
     <Header mode={mode}/>
     <Main mode={mode}/>
     </div>

@@ -12,7 +12,8 @@ export default {
         css:"#264DE4",
         js:"#CFB433",
         react:"#00D5F7",
-        node:"#87bf00"
+        node:"#87bf00",
+        bootstrap:'#8913ff'
       }
     },
   },
