@@ -73,6 +73,12 @@ const Experience = [
     Company: "Ormox ",
     duration: "1year",
   },
+  {
+    year: 2022,
+    designation: "Associate Software Engineer",
+    Company: "Smart Moves Lab ",
+    duration: "1year",
+  },
  
   {
     year: 2021,
@@ -80,12 +86,7 @@ const Experience = [
     Company: "Netsol Technologies Ltd",
     duration: "1year",
   },
-  {
-    year: 2022,
-    designation: "Associate Software Engineer",
-    Company: "Smart Moves Lab ",
-    duration: "1year",
-  },
+ 
   {
     year: 2020,
     designation: "Front End Developer (internee)",

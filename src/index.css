@@ -90,6 +90,37 @@ body {
   z-index: -20;
   margin-left: calc(-50vw + 50%);
 }
+
+#testimonials::before{
+  
+  content: "";
+  height: 100%;
+  width: 100%;
+  max-width: 92vw;
+  z-index: -10;
+  /* margin-left: calc(-50vw + 50%); */
+  position: absolute;
+  background-image: url("../src/assets/bg-1.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#testimonials  .slick-prev:before , #testimonials .slick-next:before, .slick-prev:before {
+  color : black;
+}
+.review-bg{
+  background: linear-gradient(
+    0deg,
+    rgba(245, 204, 230, 0.3169642857142857) 41%,
+    rgba(140, 234, 255, 0.3841911764705882) 100%
+  );
+  height: 100%;
+}
+
+.bg-gradient-to-r {
+ background-color: black;
+}
 /* tailwind reusable classes */
 @layer components {
   .header-li {
@@ -125,4 +156,18 @@ body {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
+}
+
+
+
+ 
+#Projects .slick-dots li button:before {
+  padding: 1.5rem 0 ;
+  font-size: 26px
+}
+
+
+#Projects  .slick-track .slick-current + div {
+  position: relative;
+  bottom: 10px;
 }
