@@ -47,7 +47,8 @@ const Main = ({mode}) => {
             ⭐⭐⭐⭐⭐
             <p className="py-3"> 🎁 Flash Sale! 🎁</p> 
             </p>
-            <p className="my-2 font-semibold capitalize text-black"> 🎉 25% off website designs and finally launch that dream site! 🎉 </p>
+            <p className="my-2 font-semibold capitalize text-black"> 🎉 25% discount on first your  order 🎉 
+           <br></br> 🎯 Elevate Your Web Experience with Us!  🎯</p>
             <p className="font-semibold">Contact Here </p>
             <p className="text-2xl text-bluecolor font-semibold">  0304-9513443 </p>
           </div>
