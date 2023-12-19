@@ -1,27 +1,30 @@
-import icon1 from "../assets/services/icon-1.png";
+import { IoMdAppstore } from "react-icons/io";
+import { MdOutlineWeb } from "react-icons/md";
+import { FaLaptopCode } from "react-icons/fa";
+import { MdLocalGroceryStore } from "react-icons/md";
 const Services = () => {
     const Services= [{
-        icon:icon1,
-        title:'Web Development',
-        Descrption :" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        icon:<MdOutlineWeb/>,
+        title:'Web Developemt',
+        Descrption :"we craft user-friendly websites. Our team ensures cutting-edge technology for secure and scalable solutions. Elevate your digital presence with our tailored expertise."
 
     },
     {
-        icon:'logo ',
-        title:' hello',
-        Descrption :"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        icon:<FaLaptopCode/>,
+        title:'Front End Development',
+        Descrption :"Transform visions into captivating digital interfaces through our Front End Development expertise, ensuring optimal performance across devices and browsers."
 
     },
     {
-        icon:'logo ',
-        title:' hello',
-        Descrption :"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        icon:<MdLocalGroceryStore />,
+        title:'Shopify Store Development',
+        Descrption :"Unlock the full potential of e-commerce with our Shopify Development services, tailoring scalable and feature-rich online stores that captivate your audience."
 
     },
     {
-        icon:'logo ',
-        title:' hello',
-        Descrption :"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        icon:<IoMdAppstore />,
+        title:'Shopify App Development',
+        Descrption :"Revolutionize your Shopify store with our custom Shopify App Development services, enhancing functionality and addressing unique business needs."
 
     }
 ]
@@ -32,14 +35,14 @@ const Services = () => {
         </div>
         <div className="flex justify-center gap-8 md:gap-4 flex-wrap ">
                 { Services.map((val,i)=>{
-                    const {  title, Descrption}=val;
+                    const {  title, Descrption , icon}=val;
                     return (
-                    <div key={i} className="  border-2 rounded-2xl  p-6 hover:shadow-xl text-center hover:translate-y-3 transition-all duration-700 ">
-                      <div className="flex justify-center">
-                        <img src={icon1}/>
+                    <div key={i} className="border-2 rounded-2xl  p-6 hover:shadow-xl   hover:translate-y-3 transition-all duration-700 ">
+                      <div className="flex justify-center text-6xl text-bluecolor">
+                        {icon}
                         </div>
-                        <h1 className="py-8 text-gray-800 font-semibold">{title}</h1>
-                        <p className="w-64">{Descrption}</p>
+                        <h1 className="py-6 text-gray-800 font-semibold text-center">{title}</h1>
+                        <p className="w-64 text-center">{Descrption}</p>
                     </div>  
                      )                 
                 })}

@@ -6,11 +6,11 @@ import HeaderMain from "../components/HeaderMain";
 import Loader from "../components/Loader";
 import Services from "../components/Services";
 import Skills from "../components/Skills";
-import Projects from "./../components/Projects";
+import Projects from "../components/Projects";
 import  {ModeContext}  from "../Context/ModeContext";
 import Testimonials from "../components/Testimonials";
 
-const Home = () => {
+const Main = () => {
 const {mode} = useContext(ModeContext);
 
   return (
@@ -34,4 +34,4 @@ const {mode} = useContext(ModeContext);
   );
 };
 
-export default Home;
+export default Main;

@@ -70,19 +70,19 @@ const Experience = [
   {
     year: 2023,
     designation: "React js / Shopify Developer         ",
-    Company: "Ormox ",
+    Company: "Ormox Agency  ",
     duration: "1year",
   },
   {
     year: 2022,
-    designation: "Associate Software Engineer",
+    designation: "Software Engineer (React js )",
     Company: "Smart Moves Lab ",
     duration: "1year",
   },
  
   {
     year: 2021,
-    designation: "Software Engineer ( Reactjs )",
+    designation: "Associate Software Engineer  ",
     Company: "Netsol Technologies Ltd",
     duration: "1year",
   },
