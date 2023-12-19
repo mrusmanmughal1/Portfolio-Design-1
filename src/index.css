@@ -159,11 +159,19 @@ body {
 }
 
 
+/* Projects errors */
+#Projects  .slick-prev:before , #Projects .slick-next:before, .slick-prev:before {
+  color: black;
+}
 
+.slick-slider  .slick-next ::before{
+  color: black;
+
+}
  
 #Projects .slick-dots li button:before {
   padding: 1.5rem 0 ;
-  font-size: 26px
+  font-size: 16px
 }
 
 

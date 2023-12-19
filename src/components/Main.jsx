@@ -45,11 +45,11 @@ const Main = ({mode}) => {
           <div className={`rounded-3xl text-center px-10 py-4 w-1/3   shadow-lg absolute bottom-48  transition-all duration-700 main-notes ${mode ? "bg-[#000000] border-2 border-white":'bg-white'}`}>
             <p className="font-semibold text-2xl text-bluecolor">
             ⭐⭐⭐⭐⭐
-            <p className="py-4"> 🎁 50% Discount{" "}</p> 
+            <p className="py-3"> 🎁 Flash Sale! 🎁</p> 
             </p>
-            <p className="my-2 font-semibold">For the first Customer For the first Customer For the first Customer </p>
-            <p className="font-semibold">Placing Order</p>
-            <p className="text-2xl text-bluecolor font-semibold"> DM : 0304-9513443 </p>
+            <p className="my-2 font-semibold capitalize text-black"> 🎉 25% off website designs and finally launch that dream site! 🎉 </p>
+            <p className="font-semibold">Contact Here </p>
+            <p className="text-2xl text-bluecolor font-semibold">  0304-9513443 </p>
           </div>
         </div>
       </div>
