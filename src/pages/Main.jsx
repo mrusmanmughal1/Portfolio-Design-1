@@ -21,10 +21,10 @@ const {mode} = useContext(ModeContext);
           <div id={`${mode ? "dark" :''}` }>
           <Aboutme mode={mode} />
           <Skills mode={mode} />
-          <Services />
-          <Projects />
-          <Testimonials/>
-          <ContactForm />
+          <Services mode={mode}/>
+          <Projects  mode={mode}/>
+          <Testimonials mode={mode}/>
+          <ContactForm  mode={mode}/>
           <Footer />
           </div>
           <Loader />

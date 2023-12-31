@@ -98,7 +98,7 @@ const Skills = ({mode}) => {
   return (
     <section id="skills" className="md:pb-16 pb-8">
       <div className="pt-16">
-        <div className="text-center md:pb-16 pb-8 md:text-6xl text-3xl  font-bold text-blue-950  ">
+        <div className={`${mode && "text-bluecolor"} text-center md:pb-16 pb-8 md:text-6xl text-3xl  font-bold text-blue-950  `}>
           <h1 className="titles pb-2">Skills & Experience</h1>
         </div>
         <div className="flex md:flex-row flex-col">

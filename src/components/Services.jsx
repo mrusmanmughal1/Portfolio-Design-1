@@ -2,7 +2,7 @@ import { IoMdAppstore } from "react-icons/io";
 import { MdOutlineWeb } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { MdLocalGroceryStore } from "react-icons/md";
-const Services = () => {
+const Services = ({mode}) => {
     const Services= [{
         icon:<MdOutlineWeb/>,
         title:'Web Developemt',
@@ -30,7 +30,7 @@ const Services = () => {
 ]
   return (
     <section className="md:py-16 py-10 " id="Services">
-        <div className="text-center md:pb-16  pb-8 md:text-6xl text-3xl font-bold text-blue-950">
+        <div className={`${mode && "text-bluecolor"} text-center md:pb-16  pb-8 md:text-6xl text-3xl font-bold text-blue-950`}>
         <h1 className="titles pb-2"> Services </h1>
         </div>
         <div className="flex justify-center gap-8 md:gap-4 flex-wrap ">
@@ -41,7 +41,7 @@ const Services = () => {
                       <div className="flex justify-center text-6xl text-bluecolor">
                         {icon}
                         </div>
-                        <h1 className="py-6 text-gray-800 font-semibold text-center">{title}</h1>
+                        <h1 className={`py-6 text-gray-800 font-semibold text-center ${mode && "text-white"}`}>{title}</h1>
                         <p className="w-64 text-center">{Descrption}</p>
                     </div>  
                      )                 

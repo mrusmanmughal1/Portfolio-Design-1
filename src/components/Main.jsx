@@ -1,3 +1,4 @@
+import FloatNotification from "../Ui/FloatNotification";
 import hand from "../assets/hand.png";
 import user from "../assets/user-image.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -41,18 +42,7 @@ const Main = ({mode}) => {
           </div>
         </div>
 
-        <div className=" w-[30%]  flex justify-end  hidden md:block " >
-          <div className={`rounded-3xl text-center px-10 py-4 w-1/3   shadow-lg absolute bottom-48  transition-all duration-700 main-notes ${mode ? "bg-[#000000] border-2 border-white":'bg-white'}`}>
-            <p className="font-semibold text-2xl text-bluecolor">
-            ⭐⭐⭐⭐⭐
-            <p className="py-3"> 🎁 Flash Sale! 🎁</p> 
-            </p>
-            <p className="my-2 font-semibold capitalize text-black"> 🎉 25% discount on first your  order 🎉 
-           <br></br> 🎯 Elevate Your Web Experience with Us!  🎯</p>
-            <p className="font-semibold">Contact Here </p>
-            <p className="text-2xl text-bluecolor font-semibold">  0304-9513443 </p>
-          </div>
-        </div>
+      <FloatNotification mode={mode}/>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import pic from "../assets/user-image.png";
 import { BiSolidStar } from "react-icons/bi";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import bg from "../assets/bg-1.png";
-const Testimonials = () => {
+const Testimonials = ({mode}) => {
   const settings = {
     arrows: true,
     slidesToShow: 1,
@@ -24,7 +24,7 @@ const Testimonials = () => {
   ]
   return (
     <section className="py-16 h-screen overflow-hidden" id="testimonials">
-      <div className="text-center pb-16 md:text-5xl text-3xl font-bold text-blue-950">
+      <div className={` ${mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl font-bold text-blue-950`}>
         <p className="titles pb-2">What people say about us?</p>
       </div>
       <div className="mx-auto testimonials w-1/2">
