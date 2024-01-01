@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import logo from '../assets/d.png'
+import project2 from '../assets/project2.png'
 
 const Projects = ({mode}) => {
   const settings = {
@@ -8,6 +8,32 @@ const Projects = ({mode}) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <section className="py-16 " id="Projects">
@@ -17,11 +43,11 @@ const Projects = ({mode}) => {
         <div className="mx-auto"> 
           <Slider {...settings}>
            
-            <div className="rounded-full ">
-             <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
+            <div className="rounded-full   ">
+             <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" className="shadow-2xl rounded-2xl" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
             <div className="rounded-full  ">
-               <a href="https://github.com/mrusmanmughal1/HMS-Dashboard" rel="noreferrer"  target="_blank" ><img src={logo} alt="opt-aboutcom-coeus-re "  className="h-80" border="0"/></a>  
+               <a href="https://github.com/mrusmanmughal1/HMS-Dashboard" rel="noreferrer"  className="object-cov" target="_blank" ><img src={project2} alt="opt-aboutcom-coeus-re "  className="h-auto max-w-full" border="0"/></a>  
             </div>
             <div className="rounded-full ">
              <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>

@@ -177,5 +177,4 @@ body {
 
 #Projects  .slick-track .slick-current + div {
   position: relative;
-  bottom: 10px;
 }
