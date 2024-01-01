@@ -44,7 +44,7 @@ const Projects = ({mode}) => {
           <Slider {...settings}>
            
             <div className="rounded-full   ">
-             <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" className="shadow-2xl rounded-2xl" alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
+             <a href="https://ibb.co/P5h4wJF"><img src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg" className="shadow-2xl " alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2" border="0"/></a>
             </div>
             <div className="rounded-full  ">
                <a href="https://github.com/mrusmanmughal1/HMS-Dashboard" rel="noreferrer"  className="object-cov" target="_blank" ><img src={project2} alt="opt-aboutcom-coeus-re "  className="h-auto max-w-full" border="0"/></a>  

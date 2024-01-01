@@ -23,11 +23,11 @@ const Testimonials = ({mode}) => {
     }
   ]
   return (
-    <section className="py-16 h-screen overflow-hidden" id="testimonials">
+    <section className="py-20  sm:pb-40 sm:pt-32  overflow-hidden " id="testimonials">
       <div className={` ${mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl font-bold text-blue-950`}>
-        <p className="titles pb-2">What people say about us?</p>
+        <p className="titles pb-2 text-center sm:p-0 px-8">What people say about us?</p>
       </div>
-      <div className="mx-auto testimonials w-1/2">
+      <div className="mx-auto testimonials md:w-1/2  w-9/12 max-h-min">
         <Slider {...settings}>
           
 
