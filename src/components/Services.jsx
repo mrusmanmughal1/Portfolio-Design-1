@@ -37,7 +37,7 @@ const Services = ({mode}) => {
                 { Services.map((val,i)=>{
                     const {  title, Descrption , icon}=val;
                     return (
-                    <div key={i} className="border-2 rounded-2xl  p-6 hover:shadow-xl   hover:translate-y-3 transition-all duration-700 ">
+                    <div key={i} className="border rounded-2xl shadow-md p-6 hover:shadow-xl   hover:translate-y-3 transition-all duration-700 ">
                       <div className="flex justify-center text-6xl text-bluecolor">
                         {icon}
                         </div>
