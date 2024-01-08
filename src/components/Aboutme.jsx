@@ -10,7 +10,7 @@ const Aboutme = ({mode}) => {
         </div>
         <div className=" gap-10 sm:flex md:flex-row lg:flex-row  justify-center ">
           <div className="md:w-1/2  px-2 md:p-16">
-            <img src={Img} alt="" />
+            <img src={Img} alt="" loading="lazy" />
           </div>
           <div className="md:w-1/2 flex flex-col gap-5 px-8 md:py-0 pt-10"> 
             <div className="text-xl font-semibold text-bluecolor tracking-widest">MY INTRO</div>

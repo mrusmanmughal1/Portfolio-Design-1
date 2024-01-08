@@ -12,7 +12,7 @@ const Main = ({ mode }) => {
       <div className="flex  md:flex-row flex-col overflow-hidden    px-5 md:px-0 ">
         <div className="md:w-[70%] flex flex-col gap-4 md:align-middle     md:justify-center justify-center  align-bottom md:py-28 md:h-screen pt-20  ">
           <div className=" md:absolute order-2 md:order-1 -z-10 max-w-sm  bottom-0   left-1/3">
-            <img src={user} alt="" className="" />
+            <img src={user} alt="" loading="lazy" className="" />
           </div>
           <div className="flex items-center gap-2">
             <img src={hand} alt="hello hand" />

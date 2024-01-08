@@ -67,6 +67,7 @@ const Projects = ({ mode }) => {
                 alt="opt-aboutcom-coeus-re "
                 className="h-auto max-w-full shadow-2xl"
                 border="0"
+                loading="lazy"
               />
             </a>
           </div>
@@ -76,6 +77,7 @@ const Projects = ({ mode }) => {
                 src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg"
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
+                loading="lazy"
               />
             </a>
           </div>
@@ -85,6 +87,7 @@ const Projects = ({ mode }) => {
                 src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg"
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
+                loading="lazy"
               />
             </a>
           </div>
