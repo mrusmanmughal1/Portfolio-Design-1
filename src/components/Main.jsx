@@ -4,7 +4,7 @@ import user from "../assets/user-image.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 const Main = ({ mode }) => {
   const [text] = useTypewriter({
-    words: ["Website Develoepr", "React Developer", "Shopify Developer"],
+    words: ["Website Developer", "React Developer", "Shopify Developer","Custom Website Developer"],
     loop: {},
   });
   return (
