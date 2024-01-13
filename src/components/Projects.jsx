@@ -1,6 +1,9 @@
 import Slider from "react-slick";
 import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
+import project3 from "../assets/projects/p3.png";
+
+
 
 const Projects = ({ mode }) => {
   const settings = {
@@ -74,14 +77,14 @@ const Projects = ({ mode }) => {
           <div className="rounded-full ">
             <a href="https://ibb.co/P5h4wJF">
               <img
-                src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg"
+                src={project3}
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
                 loading="lazy"
               />
             </a>
           </div>
-          <div className="rounded-full">
+          <div className="rounded-full project-img">
             <a href="https://ibb.co/P5h4wJF">
               <img
                 src="https://i.ibb.co/vJPmZfV/opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2.jpg"
