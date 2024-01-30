@@ -56,7 +56,7 @@ const Projects = ({ mode }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={project1} className="shadow-2xl " alt="" border="0" />
+              <img src={project1} className="shadow-lg " alt="" border="0" />
             </a>
           </div>
           <div className="rounded-full  ">
@@ -68,7 +68,7 @@ const Projects = ({ mode }) => {
               <img
                 src={project2}
                 alt="opt-aboutcom-coeus-re "
-                className="h-auto max-w-full shadow-2xl"
+                className="h-auto max-w-full shadow-lg"
                 border="0"
                 loading="lazy"
               />
@@ -80,7 +80,8 @@ const Projects = ({ mode }) => {
                 src={project3}
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
-                loading="lazy"
+                loading="lazy" 
+                className="shadow-lg "
               />
             </a>
           </div>
@@ -91,6 +92,7 @@ const Projects = ({ mode }) => {
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
                 loading="lazy"
+                className="shadow-lg "
               />
             </a>
           </div>
