@@ -3,6 +3,8 @@ import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
 import project3 from "../assets/projects/p3.png";
 import project4 from "../assets/projects/p4.png";
+import project5 from "../assets/projects/p5.png";
+
 
 
 
@@ -91,6 +93,17 @@ const Projects = ({ mode }) => {
             <a href="#">
               <img
                 src={project4}
+                alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
+                border="0"
+                loading="lazy"
+                className="shadow-lg "
+              />
+            </a>
+          </div>
+          <div className="rounded-full project-img">
+            <a href="#">
+              <img
+                src={project5}
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
                 border="0"
                 loading="lazy"
