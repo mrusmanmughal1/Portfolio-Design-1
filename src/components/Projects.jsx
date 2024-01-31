@@ -88,7 +88,7 @@ const Projects = ({ mode }) => {
             </a>
           </div>
           <div className="rounded-full project-img">
-            <a href="https://ibb.co/P5h4wJF">
+            <a href="#">
               <img
                 src={project4}
                 alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
