@@ -1,8 +1,9 @@
 import Slider from "react-slick";
-import pic from "../assets/user-image.png";
+import pic1 from "../assets/testimonials/1.png"
+import pic2 from "../assets/testimonials/2.png"
+
 import { BiSolidStar } from "react-icons/bi";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import bg from "../assets/bg-1.png";
 const Testimonials = ({mode}) => {
   const settings = {
     arrows: true,
@@ -12,14 +13,14 @@ const Testimonials = ({mode}) => {
 
   const testimonials =[
     {
-      pic : pic,
-      Name : "MUHAMMAD USMAN",
-      Message : " Lorem ipsum, dolor sit amet conslitia totam ipsa!Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa!"
+      pic : pic1,
+      Name : "Aliya Aris ",
+      Message : "I have had the pleasure of working with M Usman over the past few months, and I must say they are an exceptional professional. M Usman brings a wealth of expertise and a positive attitude to every project."
     },
     {
-      pic : pic,
-      Name : "MUHAMMAD USMAN",
-      Message : " Lorem ipsum, dolor sit amet conslitia totam ipsa!Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa! Lorem ipsum, dolor sit amet conslitia totam ipsa!"
+      pic : pic2,
+      Name : "Monic Agee",
+      Message : "Working with M Usman has been an absolute pleasure, and I am thrilled to share my positive experiences with their outstanding contributions, they are a game-changer in every aspect."
     }
   ]
   return (
@@ -35,10 +36,12 @@ const Testimonials = ({mode}) => {
               testimonials.map(( val ,i)=>{
                 return <div key={i} >
                   <div className="">
-            <div className="flex justify-center">
-              <img src={val.pic} alt="" className="w-44  " />
+            <div className="flex justify-center ">
+              <div className="bg-slate-100  rounded-2xl ">
+              <img src={val.pic} alt="" className="w-52 p " />
+              </div>
             </div>
-            <p className="font-bold text-center  text-bluecolor text-3xl font-serif ">{val.Name}</p>
+            <p className="font-bold text-center  text-bluecolor text-3xl font-serif  font-thin pt-2">{val.Name}</p>
 
             <div className="">
             <FaQuoteLeft className="block me-2 " />
