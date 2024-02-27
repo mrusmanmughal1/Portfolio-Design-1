@@ -4,12 +4,28 @@ import project1 from "../assets/project1.png";
 import project3 from "../assets/projects/p3.png";
 import project4 from "../assets/projects/p4.png";
 import project5 from "../assets/projects/p5.png";
-
-
-
-
+import project6 from "../assets/projects/p6.png";
 
 const Projects = ({ mode }) => {
+  return (
+    <section className="py-16 " id="Projects">
+      <div
+        className={`${
+          mode && "text-bluecolor"
+        } text-center pb-16 md:text-6xl text-3xl font-bold text-blue-950 `}
+      >
+        <p className="titles pb-2"> Latest Projects</p>
+      </div>
+      <div className="mx-auto">
+        <AllProjects />
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
+
+export const AllProjects = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -43,78 +59,72 @@ const Projects = ({ mode }) => {
       },
     ],
   };
+  const projectData = [
+    {
+      img: project2,
+      github: "https://github.com/mrusmanmughal1/HMS-Dashboard",
+
+      liveUrl: "",
+    },
+    {
+      img: project1,
+      github: "https://github.com/mrusmanmughal1/HMS-Landing-page",
+
+      liveUrl: "",
+    },
+    {
+      img: project3,
+      github: "https://github.com/mrusmanmughal1/Eato-Food",
+      liveUrl: "",
+    },
+    {
+      img: project4,
+      github: "",
+      liveUrl: "",
+    },
+    {
+      img: project5,
+      github: "",
+      liveUrl: "",
+    },
+    {
+      img: project6,
+      github: "",
+      liveUrl: "https://meandmirai.de/",
+    },
+  ];
+
   return (
-    <section className="py-16 " id="Projects">
-      <div
-        className={`${
-          mode && "text-bluecolor"
-        } text-center pb-16 md:text-6xl text-3xl font-bold text-blue-950 `}
-      >
-        <p className="titles pb-2"> Latest Projects</p>
-      </div>
-      <div className="mx-auto">
-        <Slider {...settings}>
-          <div className="rounded-full mx-4   ">
-            <a
-              href="https://github.com/mrusmanmughal1/HMS-Landing-page"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={project1} className="shadow-lg " alt="" border="0" />
+    <Slider {...settings}>
+      {projectData.map((val, i) => {
+        const { img, github, liveUrl } = val;
+
+        return (
+          <div key={i} className="rounded-full  relative  ">
+            <div className="absolute bottom-0 border-slate-600 bg-slate-50  w-full  transition-opacity duration-1000 ease-out opacity-0 hover:opacity-75">
+              <div className="flex gap-4 justify-center items-center py-10">
+                {github && (
+                  <a href={github} target="_blank" rel="noreferrer" >
+                    <button className="bg-blue-950 hover:opacity-100 text-white px-4 py-2 rounded-md">
+                      Git Hub
+                    </button>
+                  </a>
+                )}
+                {liveUrl && (
+                  <a href={liveUrl} target="_blank" rel="noreferrer">
+                    <button className="bg-blue-950 text-white px-4 py-2 rounded-md">
+                      Live Link
+                    </button>
+                  </a>
+                )}
+              </div>
+            </div>
+            <a href={liveUrl} target="_blank" rel="noreferrer">
+              <img src={img} className="shadow-lg " alt="" border="0" />
             </a>
           </div>
-          <div className="rounded-full  ">
-            <a
-              href="https://github.com/mrusmanmughal1/HMS-Dashboard"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                src={project2}
-                alt="opt-aboutcom-coeus-re "
-                className="h-auto max-w-full shadow-lg"
-                border="0"
-                loading="lazy"
-              />
-            </a>
-          </div>
-          <div className="rounded-full ">
-            <a href="https://ibb.co/P5h4wJF">
-              <img
-                src={project3}
-                alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
-                border="0"
-                loading="lazy" 
-                className="shadow-lg "
-              />
-            </a>
-          </div>
-          <div className="rounded-full project-img">
-            <a href="#">
-              <img
-                src={project4}
-                alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
-                border="0"
-                loading="lazy"
-                className="shadow-lg "
-              />
-            </a>
-          </div>
-          <div className="rounded-full project-img">
-            <a href="#">
-              <img
-                src={project5}
-                alt="opt-aboutcom-coeus-resources-content-migration-serious-eats-seriouseats-com-recipes-images-2014-09-2"
-                border="0"
-                loading="lazy"
-                className="shadow-lg "
-              />
-            </a>
-          </div>
-        </Slider>
-      </div>
-    </section>
+        );
+      })}
+    </Slider>
   );
 };
-
-export default Projects;
