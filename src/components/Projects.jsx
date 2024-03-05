@@ -3,7 +3,7 @@ import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
 import project3 from "../assets/projects/p3.png";
 import project4 from "../assets/projects/p4.png";
-import project5 from "../assets/projects/p5.png";
+import singlepro2 from "../assets/projects/p5.png";
 import project6 from "../assets/projects/p6.png";
 
 const Projects = ({ mode }) => {
@@ -80,12 +80,12 @@ export const AllProjects = () => {
     {
       img: project4,
       github: "",
-      liveUrl: "",
+      liveUrl: "https://www.noriskin.eu/products/noriskinofficial?view=singleprooo",
     },
     {
-      img: project5,
+      img: singlepro2,
       github: "",
-      liveUrl: "",
+      liveUrl: "https://www.noriskin.eu/products/noriskinofficial?view=singlepro-2",
     },
     {
       img: project6,
