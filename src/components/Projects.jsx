@@ -6,6 +6,8 @@ import project4 from "../assets/projects/p4.png";
 import singlepro2 from "../assets/projects/p5.png";
 import project6 from "../assets/projects/p6.png";
 import project7 from "../assets/projects/p7.png";
+import project8 from "../assets/projects/wholsesales.png";
+import project10 from "../assets/projects/jobsshopper.png";
 
 const Projects = ({ mode }) => {
   return (
@@ -66,7 +68,16 @@ export const AllProjects = () => {
       github: "",
       liveUrl: "https://7kctech.com/",
     },
-   
+    {
+      img: project8,
+      github: "",
+      liveUrl: "https://www.wholesaleez.com/",
+    },
+    {
+      img: project10,
+      github: "",
+      liveUrl: "https://jobsfrontend.7kctech.com/",
+    },
     {
       img: project1,
       github: "https://github.com/mrusmanmughal1/HMS-Landing-page",
@@ -78,6 +89,7 @@ export const AllProjects = () => {
       github: "https://github.com/mrusmanmughal1/Eato-Food",
       liveUrl: "",
     },
+
     {
       img: project4,
       github: "",
@@ -101,7 +113,6 @@ export const AllProjects = () => {
       github: "",
       liveUrl: "https://meandmirai.de/",
     },
-   
   ];
 
   return (
@@ -112,7 +123,7 @@ export const AllProjects = () => {
         return (
           <div key={i} className="rounded-full  relative  ">
             <div className="absolute bottom-0 border-slate-600 bg-slate-50  w-full  transition-opacity duration-1000 ease-out opacity-0 hover:opacity-75">
-              <div className="flex gap-4 justify-center items-center py-10">
+              <div className="flex gap-4 justify-center items-center py-16">
                 {github && (
                   <a href={github} target="_blank" rel="noreferrer">
                     <button className="bg-blue-950 hover:opacity-100 text-white px-4 py-2 rounded-md">

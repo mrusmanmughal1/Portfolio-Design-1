@@ -30,7 +30,7 @@ const Services = ({mode}) => {
     },
     {
         icon:icon4,
-        title:'Shopify App Development',
+        title:'IOS/Android  App Development',
         Descrption :"Revolutionize your Shopify store with our custom Shopify App Development services, enhancing functionality and addressing unique business needs."
 
     }
