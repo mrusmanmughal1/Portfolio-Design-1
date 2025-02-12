@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import project2 from "../assets/project2.png";
-import project11 from "../assets/p1.png";
+import project11 from "../assets/projects/p1.png";
+import project212 from "../assets/projects/p2.png";
 
 import project1 from "../assets/project1.png";
 import project3 from "../assets/projects/p3.png";
@@ -65,6 +66,7 @@ export const AllProjects = () => {
     ],
   };
   const projectData = [
+   
     {
       img: project11,
       github: "",
@@ -85,6 +87,12 @@ export const AllProjects = () => {
       img: project10,
       github: "",
       liveUrl: "http://dev.jobsshopper.com/",
+    },
+    {
+      img: project212,
+      github: "",
+
+      liveUrl: "https://7kcmarketings.vercel.app/",
     },
     {
       img: project1,
