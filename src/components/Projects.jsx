@@ -84,7 +84,7 @@ export const AllProjects = () => {
     {
       img: project10,
       github: "",
-      liveUrl: "https://jobsfrontend.7kctech.com/",
+      liveUrl: "http://dev.jobsshopper.com/",
     },
     {
       img: project1,
