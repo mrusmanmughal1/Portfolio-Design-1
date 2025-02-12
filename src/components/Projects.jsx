@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 import project2 from "../assets/project2.png";
+import project11 from "../assets/p1.png";
+
 import project1 from "../assets/project1.png";
 import project3 from "../assets/projects/p3.png";
 import project4 from "../assets/projects/p4.png";
@@ -63,6 +65,12 @@ export const AllProjects = () => {
     ],
   };
   const projectData = [
+    {
+      img: project11,
+      github: "",
+
+      liveUrl: "https://ecomenable.com/",
+    },
     {
       img: project7,
       github: "",
