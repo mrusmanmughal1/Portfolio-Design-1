@@ -66,7 +66,6 @@ export const AllProjects = () => {
     ],
   };
   const projectData = [
-   
     {
       img: project11,
       github: "",
@@ -157,7 +156,12 @@ export const AllProjects = () => {
               </div>
             </div>
             <a href={liveUrl} target="_blank" rel="noreferrer">
-              <img src={img} className="shadow-lg " alt="" border="0" />
+              <img
+                src={img}
+                className="   w-96 h-96 object-contain"
+                alt=""
+                border="0"
+              />
             </a>
           </div>
         );
