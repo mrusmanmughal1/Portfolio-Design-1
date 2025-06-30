@@ -9,6 +9,9 @@ import project4 from "../assets/projects/p4.png";
 import singlepro2 from "../assets/projects/p5.png";
 import project6 from "../assets/projects/p6.png";
 import project7 from "../assets/projects/p7.png";
+import project14 from "../assets/projects/p8.png";
+import project15 from "../assets/projects/p9.png";
+
 import project8 from "../assets/projects/wholsesales.png";
 import project10 from "../assets/projects/jobsshopper.png";
 
@@ -66,6 +69,18 @@ export const AllProjects = () => {
     ],
   };
   const projectData = [
+    {
+      img: project14,
+      github: "",
+
+      liveUrl: "https://victorhub.io/",
+    },
+    {
+      img: project15,
+      github: "",
+
+      liveUrl: "https://lashpals.ca/",
+    },
     {
       img: project11,
       github: "",
@@ -136,7 +151,7 @@ export const AllProjects = () => {
         const { img, github, liveUrl } = val;
 
         return (
-          <div key={i} className="rounded-full  relative  ">
+          <div key={i} className="rounded-full  relative projects-slider  ">
             <div className="absolute bottom-0 border-slate-600 bg-slate-50  w-full  transition-opacity duration-1000 ease-out opacity-0 hover:opacity-75">
               <div className="flex gap-4 justify-center items-center py-16">
                 {github && (
@@ -156,12 +171,14 @@ export const AllProjects = () => {
               </div>
             </div>
             <a href={liveUrl} target="_blank" rel="noreferrer">
-              <img
-                src={img}
-                className="   w-96 h-96 object-contain"
-                alt=""
-                border="0"
-              />
+              <div className="  h-96 ">
+                <img
+                  src={img}
+                  className="  shadow-lg p-2  w-full h-full object-contain"
+                  alt=""
+                  border="0"
+                />
+              </div>
             </a>
           </div>
         );
