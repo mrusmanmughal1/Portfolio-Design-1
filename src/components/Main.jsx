@@ -2,19 +2,34 @@ import FloatNotification from "../Ui/FloatNotification";
 import hand from "../assets/hand.png";
 import user from "../assets/user-image.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 const Main = ({ mode }) => {
   const [text] = useTypewriter({
     words: ["Website Developer", "React Developer", "Shopify Developer","Custom Website Developer"],
     loop: {},
   });
+  
+  const [handRef, handVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [nameRef, nameVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [buttonsRef, buttonsVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id={`${mode ? "darkmode" : "main"}`}>
-      <div className="flex  md:flex-row flex-col overflow-hidden    px-5 md:px-0 ">
-        <div className="md:w-[70%] flex flex-col gap-4 md:align-middle     md:justify-center justify-center  align-bottom md:py-28 md:h-screen pt-20  ">
-          <div className=" md:absolute order-2 md:order-1 -z-10 max-w-sm  bottom-0   left-1/3">
-            <img src={user} alt="" loading="lazy" className="" />
-          </div>
-          <div className="flex items-center gap-2">
+    <section id={`${mode ? "darkmode" : "main"}`} className="relative min-h-screen">
+      <div 
+        ref={imageRef}
+        className={`absolute bottom-0 md:bottom-20 left-1/2 -translate-x-1/2 -z-10 max-w-xs md:max-w-sm w-auto fade-in ${imageVisible ? 'visible' : ''}`}
+      >
+        <img src={user} alt="Muhammad Usman" loading="lazy" className="w-full hidden md:block h-auto object-contain" />
+      </div>
+      <div className="flex  md:flex-row flex-col overflow-hidden     px-5 md:px-0 ">
+        <div className="md:w-[70%] flex flex-col gap-4 md:align-middle md:justify-center justify-center align-bottom md:py-28 md:h-screen pt-56 pb-20 md:pb-0">
+          <div 
+            ref={handRef}
+            className={`flex items-center gap-2 fade-in-left ${handVisible ? 'visible' : ''}`}
+          >
             <img src={hand} alt="hello hand" />
             <p
               className={`"${
@@ -24,12 +39,16 @@ const Main = ({ mode }) => {
               HELLO , I AM
             </p>
           </div>
-          <p className="font-bold md:text-7xl text-4xl  text-bluecolor">
+          <p 
+            ref={nameRef}
+            className={`font-bold md:text-7xl text-4xl text-bluecolor fade-in-up ${nameVisible ? 'visible' : ''} animate-delay-200`}
+          >
             MUHAMAMD <br /> USMAN
           </p>
           <div className="min-h-3">
             <p
-              className={`"text-2xl  md:text-4xl font-semibold uppercase  ${
+              ref={titleRef}
+              className={`"text-2xl  md:text-4xl font-semibold uppercase fade-in-up ${titleVisible ? 'visible' : ''} animate-delay-300  ${
                 mode ? "text-white" : "text-black"
               }  "`}
             >
@@ -40,7 +59,10 @@ const Main = ({ mode }) => {
               </i>
             </p>
           </div>
-          <div className="flex  gap-4 items-center ">
+          <div 
+            ref={buttonsRef}
+            className={`flex  gap-4 items-center fade-in-up ${buttonsVisible ? 'visible' : ''} animate-delay-400`}
+          >
             <a
               href="https://www.upwork.com/freelancers/~01860d35c85271198e"
               target="_blank"

@@ -4,7 +4,12 @@ import pic2 from "../assets/testimonials/2.png"
 
 import { BiSolidStar } from "react-icons/bi";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 const Testimonials = ({mode}) => {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [sliderRef, sliderVisible] = useScrollAnimation({ threshold: 0.1 });
+
   const settings = {
     arrows: true,
     slidesToShow: 1,
@@ -25,10 +30,16 @@ const Testimonials = ({mode}) => {
   ]
   return (
     <section className="py-20  sm:pb-40 sm:pt-32  overflow-hidden " id="testimonials">
-      <div className={` ${mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl font-bold text-blue-950`}>
+      <div 
+        ref={titleRef}
+        className={`${mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl font-bold text-blue-950 fade-in-up ${titleVisible ? 'visible' : ''}`}
+      >
         <p className="titles pb-2 text-center sm:p-0 px-8">What people say about us?</p>
       </div>
-      <div className="mx-auto testimonials md:w-1/2  w-9/12 max-h-min">
+      <div 
+        ref={sliderRef}
+        className={`mx-auto testimonials md:w-1/2 w-9/12 max-h-min fade-in ${sliderVisible ? 'visible' : ''}`}
+      >
         <Slider {...settings}>
           
 

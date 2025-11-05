@@ -1,18 +1,33 @@
 import Img from "../assets/aboutme.png"
 import Icons from "./Icons";
-import cv from "../assets/usman2024.pdf"
+import cv from "../assets/usman.pdf"
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 const Aboutme = ({mode}) => {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [contentRef, contentVisible] = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section id="about-me" className="py-16">
       <div>
-        <div className={`text-center text-6xl font-bold text-blue-950   pt-6 pb-16 ${mode && "text-bluecolor"}`} >
+        <div 
+          ref={titleRef}
+          className={`text-center text-6xl font-bold text-blue-950 pt-6 pb-16 fade-in-up ${titleVisible ? 'visible' : ''} ${mode && "text-bluecolor"}`} 
+        >
            <h1 className="titles "> About Me </h1>  
         </div>
         <div className=" gap-10 sm:flex md:flex-row lg:flex-row  justify-center ">
-          <div className="md:w-1/2  px-2 md:p-16">
+          <div 
+            ref={imageRef}
+            className={`md:w-1/2 px-2 md:p-16 fade-in-left ${imageVisible ? 'visible' : ''}`}
+          >
             <img src={Img} alt="" loading="lazy" />
           </div>
-          <div className="md:w-1/2 flex flex-col gap-5 px-8 md:py-0 pt-10"> 
+          <div 
+            ref={contentRef}
+            className={`md:w-1/2 flex flex-col gap-5 px-8 md:py-0 pt-10 fade-in-right ${contentVisible ? 'visible' : ''}`}
+          > 
             <div className="text-xl font-semibold text-bluecolor tracking-widest">MY INTRO</div>
             <div className="text-4xl text-blue-950">I am <span className={`md:text-6xl text-4xl font-semibold ${mode && "text-bluecolor"}`}> M Usman, </span></div>
             <div className="md:text-2xl text-lg text-slate-600  font-semibold ">A Front End Developer Based in Pakistan</div>

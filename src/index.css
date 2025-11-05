@@ -30,10 +30,22 @@ body {
   z-index: -30;
   margin-left: calc(-50vw + 50%);
   position: absolute;
-  background-image: url("../src/assets/main-bg.jpg");
+  /* Mobile: Gradient background */
+  background: linear-gradient(
+    0deg,
+    rgba(245, 204, 230, 0.3169642857142857) 41%,
+    rgba(140, 234, 255, 0.3841911764705882) 100%
+  );
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .header-main::before {
+    /* Desktop: Background image */
+    background-image: url("../src/assets/main-bg.jpg");
+  }
 }
 
 #skills,
@@ -178,5 +190,150 @@ body {
 }
 
 .projects-slider .slick-slide > div {
-  margin: 30px;
+  margin: 0;
+}
+
+/* Enhanced Projects Section Styling */
+#Projects .slick-prev,
+#Projects .slick-next {
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#Projects .slick-prev:hover,
+#Projects .slick-next:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#Projects .slick-prev:before,
+#Projects .slick-next:before {
+  font-size: 24px;
+  color: white;
+  opacity: 1;
+}
+
+#Projects .slick-prev {
+  left: -60px;
+}
+
+#Projects .slick-next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  #Projects .slick-prev,
+  #Projects .slick-next {
+    display: none !important;
+  }
+}
+
+#Projects .slick-dots {
+  bottom: -50px;
+}
+
+#Projects .slick-dots li {
+  margin: 0 8px;
+}
+
+#Projects .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+#Projects .slick-dots li button:hover,
+#Projects .slick-dots li.slick-active button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scale(1.3);
+}
+
+#Projects .slick-dots li button:before {
+  display: none;
+}
+
+/* Scroll Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger animation delays */
+.animate-delay-100 {
+  transition-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  transition-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  transition-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  transition-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  transition-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  transition-delay: 0.6s;
 }

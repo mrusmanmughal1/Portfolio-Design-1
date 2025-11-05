@@ -3,8 +3,13 @@ import mail from "../assets/email.png";
 import phone from "../assets/phone.png";
 import emailjs from '@emailjs/browser';
 import toast from "react-hot-toast";
+import useScrollAnimation from "../hooks/useScrollAnimation";
+
 const ContactForm = ({mode}) => {
   const form = useRef();
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [contactInfoRef, contactInfoVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [formRef, formVisible] = useScrollAnimation({ threshold: 0.1 });
 
    
     
@@ -30,10 +35,16 @@ const ContactForm = ({mode}) => {
 
   return (
     <section  id="contact-form">
-      <div className={`${ mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl py-16 font-bold text-blue-950 `}>
+      <div 
+        ref={titleRef}
+        className={`${mode && "text-bluecolor"} text-center pb-16 md:text-5xl text-3xl py-16 font-bold text-blue-950 fade-in-up ${titleVisible ? 'visible' : ''}`}
+      >
         <h1 className="titles px-3">Take a Coffee & chat with me</h1>
       </div>
-      <div className="flex md:flex-row flex-wrap items-center justify-center gap-8 text-gray-700 font-semibold px-5 md:text-2xl text-sm">
+      <div 
+        ref={contactInfoRef}
+        className={`flex md:flex-row flex-wrap items-center justify-center gap-8 text-gray-700 font-semibold px-5 md:text-2xl text-sm fade-in-up ${contactInfoVisible ? 'visible' : ''} animate-delay-200`}
+      >
         <div className="flex items-center gap-5  bg-[#F9D9FD] px-4 py-4 rounded-xl">
           <img src={mail} alt="" /> mrusmanmughal1 @gmail.com
         </div>
@@ -41,7 +52,10 @@ const ContactForm = ({mode}) => {
           <img src={phone} alt="" /> +92 304 9513443
         </div>
       </div>
-      <div className="flex justify-center   py-10 ">
+      <div 
+        ref={formRef}
+        className={`flex justify-center py-10 fade-in-up ${formVisible ? 'visible' : ''} animate-delay-300`}
+      >
         <form className="md:w-2/3 w-full px-4 " ref={form} onSubmit={(e)=>sendEmail(e)}>
           <div className=" flex md:flex-row flex-col    justify-between w-full">
             <input

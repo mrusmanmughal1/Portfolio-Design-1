@@ -7,6 +7,8 @@ import {
 } from "react-icons/bi";
 import {BiLogoTailwindCss,BiLogoNodejs} from "react-icons/bi"
 import{FaShopify} from "react-icons/fa"
+import {SiNextdotjs} from "react-icons/si"
+import useScrollAnimation from "../hooks/useScrollAnimation";
 const icons = [
   {
     icon: <AiFillHtml5 />,
@@ -35,6 +37,13 @@ const icons = [
     color: "text-react",
     bgcolor: "#D1F8FF",
     Text: "REACT JS ",
+  },
+  {
+    icon: <SiNextdotjs />,
+    text: "85%",
+    color: "text-black",
+    bgcolor: "#000000",
+    Text: "NEXT JS ",
   },
   {
     icon: <BiLogoNodejs />,
@@ -68,51 +77,59 @@ const icons = [
 
 const Experience = [
   {
-    year: 2023,
-    designation: "React js / Shopify Developer         ",
-    Company: "Ormox Agency  ",
-    duration: "1year",
+    year: 2025,
+    designation: "Mern Stack Developer         ",
+    Company: "Maham AI ",
   },
   {
-    year: 2022,
-    designation: "Software Engineer (React js )",
-    Company: "Smart Moves Lab ",
-    duration: "1year",
+    year: 2024,
+    designation: "Senior Front End Developer",
+    Company: "7 Kings Code",
   },
  
   {
     year: 2021,
     designation: "Associate Software Engineer  ",
     Company: "Netsol Technologies Ltd",
-    duration: "1year",
   },
  
   {
     year: 2020,
-    designation: "Front End Developer (internee)",
+    designation: "Front End Developer",
     Company: "Pakistan IT Solutions",
-    duration: "1year",
   },
 ];
+
 const Skills = ({mode}) => {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [skillsRef, skillsVisible] = useScrollAnimation({ threshold: 0.1 });
+  const [experienceRef, experienceVisible] = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section id="skills" className="md:pb-16 pb-8">
       <div className="pt-16">
-        <div className={`${mode && "text-bluecolor"} text-center md:pb-16 pb-8 md:text-6xl text-3xl  font-bold text-blue-950  `}>
+        <div 
+          ref={titleRef}
+          className={`${mode && "text-bluecolor"} text-center md:pb-16 pb-8 md:text-6xl text-3xl font-bold text-blue-950 fade-in-up ${titleVisible ? 'visible' : ''} `}
+        >
           <h1 className="titles pb-2">Skills & Experience</h1>
         </div>
         <div className="flex md:flex-row flex-col">
-          <div className="md:w-1/2 flex flex-wrap md:gap-8  gap-8 justify-center md:mb-0 mb-16 text-center items-center ">
+          <div 
+            ref={skillsRef}
+            className={`md:w-1/2 flex flex-wrap md:gap-8 gap-8 justify-center md:mb-0 mb-16 text-center items-center fade-in-left ${skillsVisible ? 'visible' : ''}`}
+          >
             {icons.map((val, i) => {
               const { icon, color, text, bgcolor, Text } = val;
               return (
                 <div
                   key={i}
-                  className=" hover:-translate-y-2 transition-all duration-700 "
+                  className={`hover:-translate-y-2 transition-all  duration-700 scale-in ${skillsVisible ? 'visible' : ''}`}
+                  style={{ transitionDelay: `${i * 0.1}s` }}
                 >
                   {" "}
                   <div
-                    className={` shadow-md rounded-full px-8 py-4 flex flex-col border-2 items-center bg-[${bgcolor}]`}
+                    className={` shadow-md rounded-full px-8 py-4 flex flex-col hover:scale-105 transition-all duration-700 border-2 items-center bg-[${bgcolor}]`}
                   >
                     <i className={`text-6xl ${color}`}>{icon}</i>
                     <p className="font-semibold text-lg">{text}</p>
@@ -122,23 +139,29 @@ const Skills = ({mode}) => {
               );
             })}
           </div>
-          <div className="md:w-1/2 " >
+          <div 
+            ref={experienceRef}
+            className={`md:w-1/2 fade-in-right ${experienceVisible ? 'visible' : ''}`}
+          >
             <div className="flex flex-col px-8 gap-10 ">
               {Experience.map((val, i) => {
-                const { duration, Company, designation, year } = val;
+                const { Company, designation, year } = val;
                 return (
-                  <div key={i} className="flex justify-between md:items-start items-center text-sm md:text-2xl ">
-                    <div className="text-bluecolor font-semibold ">
-                      {year}
-                    </div>
+                  <div 
+                    key={i} 
+                    className={`grid grid-cols-2 text-sm md:text-2xl fade-in-up ${experienceVisible ? 'visible' : ''}`}
+                    style={{ transitionDelay: `${i * 0.15}s` }}
+                  >
+                   
                     <div>
                       <h1 className={`${mode ? 'text-white':"text-slate-900"} font-bold   pt-4 md:pt-0 `}>
                         {designation}
                       </h1>
                       <p className="text-slate-500">{Company}</p>
                     </div>
-
-                    <div>{duration}</div>
+                    <div className="text-bluecolor text-end font-semibold ">
+                      {year}
+                    </div>
                   </div>
                 );
               })}
