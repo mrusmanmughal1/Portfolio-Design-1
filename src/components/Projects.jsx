@@ -11,6 +11,10 @@ import project6 from "../assets/projects/p6.png";
 import project7 from "../assets/projects/p7.png";
 import project14 from "../assets/projects/p8.png";
 import project15 from "../assets/projects/p9.png";
+import project16 from "../assets/projects/mahamai.png"; 
+import project17 from "../assets/projects/legato.png"; 
+
+
 
 import project8 from "../assets/projects/wholsesales.png";
 import project10 from "../assets/projects/jobsshopper.png";
@@ -77,6 +81,12 @@ export const AllProjects = () => {
     ],
   };
   const projectData = [
+    { img: project17,
+
+      liveUrl: "https://legatoo.fastestfranchise.net/",},
+    { img: project16,
+
+      liveUrl: "https://maham-ai.sa/login",},
     {
       img: project14,
       github: "",
