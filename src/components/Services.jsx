@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { Sparkles, Bot, Database, Cpu, Terminal, Layers, ArrowUpRight, CheckCircle2, Zap } from "lucide-react";
+import {
+  Sparkles,
+  Bot,
+  Database,
+  Cpu,
+  Terminal,
+  Layers,
+  ArrowUpRight,
+  CheckCircle2,
+  Zap,
+} from "lucide-react";
 
 const solutions = [
   {
@@ -8,7 +18,7 @@ const solutions = [
     desc: "Architecting self-orchestrating multi-agent systems using LangGraph and CrewAI. Featuring persistent memory checkpoints, deterministic function-calling loops, and multi-step self-reflective reasoning.",
     tags: ["LangGraph", "CrewAI", "Function Calling", "Stateful Memory"],
     metrics: "10x Workflow Acceleration",
-    color: "#06b6d4"
+    color: "#06b6d4",
   },
   {
     icon: <Database className="w-8 h-8 text-purple-400" />,
@@ -16,7 +26,7 @@ const solutions = [
     desc: "Engineering high-precision vector search architectures with Pinecone, ChromaDB, and Cohere cross-encoder rerankers. Incorporates strict hallucination guardrails and automated RAGAS evaluation.",
     tags: ["Pinecone", "ChromaDB", "Cohere Rerank", "RAGAS"],
     metrics: "99.4% Retrieval Precision",
-    color: "#a855f7"
+    color: "#a855f7",
   },
   {
     icon: <Cpu className="w-8 h-8 text-emerald-400" />,
@@ -24,7 +34,7 @@ const solutions = [
     desc: "Domain-specific fine-tuning on open-source foundation models (Llama 3, Mistral, Gemma) utilizing PEFT, LoRA, and QLoRA pipelines for specialized enterprise tasks and proprietary data formats.",
     tags: ["PyTorch", "LoRA / QLoRA", "Hugging Face", "Quantization"],
     metrics: "4x Lower Inference Cost",
-    color: "#10b981"
+    color: "#10b981",
   },
   {
     icon: <Layers className="w-8 h-8 text-blue-400" />,
@@ -32,7 +42,7 @@ const solutions = [
     desc: "Developing end-to-end generative AI web applications with FastAPI, React 18, and WebSockets. Featuring token-by-token streaming UI, responsive agent dashboards, and reliable rate-limiting.",
     tags: ["FastAPI", "React 18", "Next.js", "Streaming SSE"],
     metrics: "< 25ms Latency",
-    color: "#3b82f6"
+    color: "#3b82f6",
   },
   {
     icon: <Terminal className="w-8 h-8 text-amber-400" />,
@@ -40,7 +50,7 @@ const solutions = [
     desc: "Designing Model Context Protocol (MCP) servers, custom tool integrations, and asynchronous data pipelines that empower LLMs to safely interact with private internal databases and external APIs.",
     tags: ["MCP Protocol", "REST / GraphQL", "Async Python", "Webhooks"],
     metrics: "Deterministic Execution",
-    color: "#f59e0b"
+    color: "#f59e0b",
   },
   {
     icon: <Zap className="w-8 h-8 text-rose-400" />,
@@ -48,8 +58,8 @@ const solutions = [
     desc: "Auditing and optimizing existing AI systems: implementing prompt caching, vector index tuning, semantic routing, and self-hosted vLLM deployment to maximize throughput while minimizing cloud costs.",
     tags: ["vLLM", "Prompt Caching", "Docker", "Cost Reduction"],
     metrics: "Up to 60% Cloud Savings",
-    color: "#f43f5e"
-  }
+    color: "#f43f5e",
+  },
 ];
 
 const Services = ({ mode }) => {
@@ -57,23 +67,26 @@ const Services = ({ mode }) => {
 
   return (
     <section id="Services" className="py-24 relative overflow-hidden">
-      
       {/* Background accents */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-[92%] max-w-7xl mx-auto relative z-10">
-        
         {/* Section Heading */}
         <div className="text-center pb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
             <span>Industrial Capabilities</span>
           </div>
-          <h2 className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}>
-            AI Solutions & <span className="gradient-text-ai">Engineering Services</span>
+          <h2
+            className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}
+          >
+            AI Solutions &{" "}
+            <span className="gradient-text-ai">Engineering Services</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-            From autonomous agent swarms to enterprise RAG and low-latency full-stack intelligence, I build production-ready AI software engineered for scale.
+            From autonomous agent swarms to enterprise RAG and low-latency
+            full-stack intelligence, I build production-ready AI software
+            engineered for scale.
           </p>
         </div>
 
@@ -93,7 +106,7 @@ const Services = ({ mode }) => {
                 className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
                   background: `linear-gradient(90deg, transparent, ${item.color}, transparent)`,
-                  boxShadow: `0 0 10px ${item.color}`
+                  boxShadow: `0 0 10px ${item.color}`,
                 }}
               ></div>
 
@@ -109,9 +122,11 @@ const Services = ({ mode }) => {
                 </div>
 
                 {/* Title */}
-                <h3 className={`text-xl font-bold font-mono tracking-tight leading-snug group-hover:text-cyan-400 transition-colors ${
-                  mode ? "text-white" : "text-slate-900"
-                }`}>
+                <h3
+                  className={`text-xl font-bold font-mono tracking-tight leading-snug group-hover:text-cyan-400 transition-colors ${
+                    mode ? "text-white" : "text-slate-900"
+                  }`}
+                >
                   {item.title}
                 </h3>
 
@@ -142,11 +157,9 @@ const Services = ({ mode }) => {
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

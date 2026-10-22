@@ -2,7 +2,17 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import confetti from "canvas-confetti";
-import { Sparkles, Mail, Phone, MessageSquare, Send, CheckCircle2, Clock, Bot, ArrowRight } from "lucide-react";
+import {
+  Sparkles,
+  Mail,
+  Phone,
+  MessageSquare,
+  Send,
+  CheckCircle2,
+  Clock,
+  Bot,
+  ArrowRight,
+} from "lucide-react";
 import { BiLogoWhatsapp } from "react-icons/bi";
 
 const PROJECT_TYPES = [
@@ -10,7 +20,7 @@ const PROJECT_TYPES = [
   "Enterprise RAG & Search",
   "LLM Fine-Tuning & Evaluation",
   "Full-Stack AI Web Platform",
-  "AI Technical Advisory"
+  "AI Technical Advisory",
 ];
 
 const ContactForm = ({ mode }) => {
@@ -34,18 +44,20 @@ const ContactForm = ({ mode }) => {
         "service_d7ypra9",
         "template_dupsto8",
         form.current,
-        "jFK90bbdGOuZoMjXt"
+        "jFK90bbdGOuZoMjXt",
       )
       .then(
         () => {
           setIsSubmitting(false);
-          toast.success("Query Received! I'll analyze and respond within 2 hours.");
-          
+          toast.success(
+            "Query Received! I'll analyze and respond within 2 hours.",
+          );
+
           try {
             confetti({
               particleCount: 80,
               spread: 70,
-              origin: { y: 0.6 }
+              origin: { y: 0.6 },
             });
           } catch (err) {
             // ignore
@@ -59,36 +71,39 @@ const ContactForm = ({ mode }) => {
         (error) => {
           setIsSubmitting(false);
           console.error("Email send failed:", error.text);
-          toast.error("Transmission failed. Please message directly via WhatsApp or email!");
-        }
+          toast.error(
+            "Transmission failed. Please message directly via WhatsApp or email!",
+          );
+        },
       );
   };
 
   return (
     <section id="contact-form" className="py-24 relative overflow-hidden">
-      
       {/* Background accents */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-[92%] max-w-6xl mx-auto relative z-10">
-        
         {/* Section Heading */}
         <div className="text-center pb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
             <span>Initiate Collaboration</span>
           </div>
-          <h2 className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}>
-            Let's Architect Your <span className="gradient-text-ai">AI Product</span>
+          <h2
+            className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}
+          >
+            Let's Architect Your{" "}
+            <span className="gradient-text-ai">AI Product</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-            Have a project in mind, need autonomous agent swarms, or looking for a senior AI engineering contractor? Send a query below.
+            Have a project in mind, need autonomous agent swarms, or looking for
+            a senior AI engineering contractor? Send a query below.
           </p>
         </div>
 
         {/* Contact Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-          
           <a
             href="mailto:mrusmanmughal1@gmail.com"
             className={`p-6 rounded-2xl border transition-all duration-300 flex items-center gap-4 group hover:-translate-y-1 ${
@@ -101,7 +116,9 @@ const ContactForm = ({ mode }) => {
               <Mail className="w-6 h-6" />
             </div>
             <div className="overflow-hidden">
-              <div className="text-xs font-mono text-slate-400 uppercase">DIRECT EMAIL</div>
+              <div className="text-xs font-mono text-slate-400 uppercase">
+                DIRECT EMAIL
+              </div>
               <div className="text-sm font-bold truncate group-hover:text-cyan-400 transition-colors">
                 mrusmanmughal1@gmail.com
               </div>
@@ -122,7 +139,9 @@ const ContactForm = ({ mode }) => {
               <BiLogoWhatsapp className="text-2xl" />
             </div>
             <div>
-              <div className="text-xs font-mono text-slate-400 uppercase">WHATSAPP DISCOVERY</div>
+              <div className="text-xs font-mono text-slate-400 uppercase">
+                WHATSAPP DISCOVERY
+              </div>
               <div className="text-sm font-bold group-hover:text-emerald-400 transition-colors">
                 +92 304 9513443
               </div>
@@ -140,23 +159,25 @@ const ContactForm = ({ mode }) => {
               <Clock className="w-6 h-6" />
             </div>
             <div>
-              <div className="text-xs font-mono text-slate-400 uppercase">AVAILABILITY & SLA</div>
+              <div className="text-xs font-mono text-slate-400 uppercase">
+                AVAILABILITY & SLA
+              </div>
               <div className="text-sm font-bold text-emerald-400 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span>Response &lt; 2 Hours</span>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Interactive Consultation Form */}
-        <div className={`p-8 sm:p-12 rounded-3xl border ${
-          mode
-            ? "bg-slate-900/85 border-cyan-500/30 shadow-2xl shadow-cyan-950/40"
-            : "bg-white border-slate-200 shadow-xl"
-        } backdrop-blur-xl scanline-effect`}>
-          
+        <div
+          className={`p-8 sm:p-12 rounded-3xl border ${
+            mode
+              ? "bg-slate-900/85 border-cyan-500/30 shadow-2xl shadow-cyan-950/40"
+              : "bg-white border-slate-200 shadow-xl"
+          } backdrop-blur-xl scanline-effect`}
+        >
           {/* Form Header / Quick Topic Chips */}
           <div className="mb-8">
             <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">
@@ -172,8 +193,8 @@ const ContactForm = ({ mode }) => {
                     selectedType === type
                       ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-md shadow-cyan-500/25"
                       : mode
-                      ? "bg-slate-800 text-slate-300 border border-slate-700 hover:border-cyan-500/50"
-                      : "bg-slate-100 text-slate-700 border border-slate-200 hover:border-cyan-400"
+                        ? "bg-slate-800 text-slate-300 border border-slate-700 hover:border-cyan-500/50"
+                        : "bg-slate-100 text-slate-700 border border-slate-200 hover:border-cyan-400"
                   }`}
                 >
                   {type}
@@ -183,9 +204,7 @@ const ContactForm = ({ mode }) => {
           </div>
 
           <form ref={form} onSubmit={sendEmail} className="space-y-6">
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
               <div>
                 <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
                   Your Full Name *
@@ -219,7 +238,6 @@ const ContactForm = ({ mode }) => {
                   }`}
                 />
               </div>
-
             </div>
 
             <div>
@@ -277,11 +295,8 @@ const ContactForm = ({ mode }) => {
                 )}
               </button>
             </div>
-
           </form>
-
         </div>
-
       </div>
     </section>
   );

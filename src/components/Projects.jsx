@@ -1,6 +1,15 @@
 import { useState } from "react";
 import Slider from "react-slick";
-import { Sparkles, ExternalLink, Layers, Cpu, Database, Eye, X, ArrowUpRight } from "lucide-react";
+import {
+  Sparkles,
+  ExternalLink,
+  Layers,
+  Cpu,
+  Database,
+  Eye,
+  X,
+  ArrowUpRight,
+} from "lucide-react";
 import { BiLogoGithub } from "react-icons/bi";
 
 import project2 from "../assets/project2.png";
@@ -17,7 +26,12 @@ import project15 from "../assets/projects/p9.png";
 import project8 from "../assets/projects/wholsesales.png";
 import project10 from "../assets/projects/jobsshopper.png";
 
-const categories = ["All", "AI & Intelligence", "Full-Stack Platforms", "Enterprise Web"];
+const categories = [
+  "All",
+  "AI & Intelligence",
+  "Full-Stack Platforms",
+  "Enterprise Web",
+];
 
 const projectList = [
   {
@@ -27,9 +41,16 @@ const projectList = [
     img: project2,
     github: "https://github.com/mrusmanmughal1/HMS-Dashboard",
     liveUrl: "",
-    tags: ["React 18", "Python", "Predictive Analytics", "Tailwind", "REST API"],
+    tags: [
+      "React 18",
+      "Python",
+      "Predictive Analytics",
+      "Tailwind",
+      "REST API",
+    ],
     metric: "40% Faster Triaging",
-    summary: "Intelligent healthcare management system with automated patient record classification, bed occupancy prediction, and reactive staff dispatching."
+    summary:
+      "Intelligent healthcare management system with automated patient record classification, bed occupancy prediction, and reactive staff dispatching.",
   },
   {
     id: "victorhub",
@@ -40,7 +61,8 @@ const projectList = [
     liveUrl: "https://victorhub.io/",
     tags: ["Next.js", "AI Analytics", "Node.js", "Cloud Microservices"],
     metric: "100k+ Monthly Users",
-    summary: "Enterprise commerce intelligence platform orchestrating omnichannel analytics, catalog synchronization, and real-time sales forecasting."
+    summary:
+      "Enterprise commerce intelligence platform orchestrating omnichannel analytics, catalog synchronization, and real-time sales forecasting.",
   },
   {
     id: "jobsshopper",
@@ -51,7 +73,8 @@ const projectList = [
     liveUrl: "http://dev.jobsshopper.com/",
     tags: ["Semantic Search", "Vector Embeddings", "FastAPI", "React"],
     metric: "94% Match Accuracy",
-    summary: "Recruitment intelligence portal featuring resume semantic parsing, skill vectorization, and automated applicant-to-role matching."
+    summary:
+      "Recruitment intelligence portal featuring resume semantic parsing, skill vectorization, and automated applicant-to-role matching.",
   },
   {
     id: "hms-landing",
@@ -62,7 +85,8 @@ const projectList = [
     liveUrl: "",
     tags: ["React.js", "Tailwind CSS", "Appointment Engine", "UX Design"],
     metric: "3.2x Booking Conversion",
-    summary: "Modern patient booking platform engineered for high-availability healthcare providers with interactive doctor selection and scheduling."
+    summary:
+      "Modern patient booking platform engineered for high-availability healthcare providers with interactive doctor selection and scheduling.",
   },
   {
     id: "7kctech",
@@ -73,7 +97,8 @@ const projectList = [
     liveUrl: "https://7kctech.com/",
     tags: ["Full-Stack", "Modern UI", "API Integration", "High Performance"],
     metric: "99.9% Uptime",
-    summary: "High-performance agency and tech consultancy portal with optimized Core Web Vitals, server-side caching, and dynamic project showcase."
+    summary:
+      "High-performance agency and tech consultancy portal with optimized Core Web Vitals, server-side caching, and dynamic project showcase.",
   },
   {
     id: "ecomenable",
@@ -84,7 +109,8 @@ const projectList = [
     liveUrl: "https://ecomenable.com/",
     tags: ["E-Commerce", "Automation", "React", "Cloud"],
     metric: "$2M+ GMV Processed",
-    summary: "Comprehensive e-commerce enablement suite integrating automated store setup, inventory syncing, and marketing funnels."
+    summary:
+      "Comprehensive e-commerce enablement suite integrating automated store setup, inventory syncing, and marketing funnels.",
   },
   {
     id: "eatofood",
@@ -95,7 +121,8 @@ const projectList = [
     liveUrl: "",
     tags: ["React.js", "State Management", "Cart Architecture", "Tailwind"],
     metric: "Sub-second UI",
-    summary: "Interactive food delivery application featuring instantaneous cart calculations, restaurant filtering, and responsive checkout flows."
+    summary:
+      "Interactive food delivery application featuring instantaneous cart calculations, restaurant filtering, and responsive checkout flows.",
   },
   {
     id: "noriskin",
@@ -103,20 +130,28 @@ const projectList = [
     category: "Enterprise Web",
     img: project4,
     github: "",
-    liveUrl: "https://www.noriskin.eu/products/noriskinofficial?view=singleprooo",
-    tags: ["Headless Commerce", "Shopify API", "Animation Engine", "Conversion Rate"],
+    liveUrl:
+      "https://www.noriskin.eu/products/noriskinofficial?view=singleprooo",
+    tags: [
+      "Headless Commerce",
+      "Shopify API",
+      "Animation Engine",
+      "Conversion Rate",
+    ],
     metric: "4.8% CR Benchmark",
-    summary: "Headless beauty e-commerce experience engineered with micro-interactions, custom bundling engines, and lightning-fast load times."
-  }
+    summary:
+      "Headless beauty e-commerce experience engineered with micro-interactions, custom bundling engines, and lightning-fast load times.",
+  },
 ];
 
 const Projects = ({ mode }) => {
   const [activeTab, setActiveTab] = useState("All");
   const [activeModalProject, setActiveModalProject] = useState(null);
 
-  const filteredProjects = activeTab === "All"
-    ? projectList
-    : projectList.filter((p) => p.category === activeTab);
+  const filteredProjects =
+    activeTab === "All"
+      ? projectList
+      : projectList.filter((p) => p.category === activeTab);
 
   const sliderSettings = {
     dots: true,
@@ -144,26 +179,103 @@ const Projects = ({ mode }) => {
       },
     ],
   };
+  const projectData = [
+    {
+      img: project14,
+      github: "",
+
+      liveUrl: "https://victorhub.io/",
+    },
+    {
+      img: project15,
+      github: "",
+
+      liveUrl: "https://lashpals.ca/",
+    },
+    {
+      img: project11,
+      github: "",
+
+      liveUrl: "https://ecomenable.com/",
+    },
+    {
+      img: project7,
+      github: "",
+      liveUrl: "https://7kctech.com/",
+    },
+    {
+      img: project8,
+      github: "",
+      liveUrl: "https://www.wholesaleez.com/",
+    },
+    {
+      img: project10,
+      github: "",
+      liveUrl: "http://dev.jobsshopper.com/",
+    },
+    {
+      img: project212,
+      github: "",
+
+      liveUrl: "https://7kcmarketings.vercel.app/",
+    },
+    {
+      img: project1,
+      github: "https://github.com/mrusmanmughal1/HMS-Landing-page",
+
+      liveUrl: "",
+    },
+    {
+      img: project3,
+      github: "https://github.com/mrusmanmughal1/Eato-Food",
+      liveUrl: "",
+    },
+
+    {
+      img: project4,
+      github: "",
+      liveUrl:
+        "https://www.noriskin.eu/products/noriskinofficial?view=singleprooo",
+    },
+    {
+      img: singlepro2,
+      github: "",
+      liveUrl:
+        "https://www.noriskin.eu/products/noriskinofficial?view=singlepro-2",
+    },
+    {
+      img: project2,
+      github: "https://github.com/mrusmanmughal1/HMS-Dashboard",
+
+      liveUrl: "",
+    },
+    {
+      img: project6,
+      github: "",
+      liveUrl: "https://meandmirai.de/",
+    },
+  ];
 
   return (
     <section className="py-24 relative overflow-hidden" id="Projects">
-      
       {/* Background glow */}
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-[92%] max-w-7xl mx-auto relative z-10">
-        
         {/* Section Heading */}
         <div className="text-center pb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Layers className="w-3.5 h-3.5 text-cyan-400" />
             <span>Engineered Systems</span>
           </div>
-          <h2 className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}>
+          <h2
+            className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}
+          >
             Featured <span className="gradient-text-ai">AI & Systems Work</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-            A curated showcase of production AI systems, semantic search engines, and enterprise full-stack web platforms.
+            A curated showcase of production AI systems, semantic search
+            engines, and enterprise full-stack web platforms.
           </p>
 
           {/* Category Filter Tabs */}
@@ -176,8 +288,8 @@ const Projects = ({ mode }) => {
                   activeTab === tab
                     ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg shadow-cyan-500/25 scale-105"
                     : mode
-                    ? "bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white"
-                    : "bg-white text-slate-600 border border-slate-200 hover:text-slate-900 shadow-sm"
+                      ? "bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-white"
+                      : "bg-white text-slate-600 border border-slate-200 hover:text-slate-900 shadow-sm"
                 }`}
               >
                 {tab}
@@ -255,9 +367,11 @@ const Projects = ({ mode }) => {
                   {/* Body Content */}
                   <div className="p-6 flex flex-col justify-between flex-grow">
                     <div>
-                      <h3 className={`text-lg font-bold font-mono group-hover:text-cyan-400 transition-colors leading-snug ${
-                        mode ? "text-white" : "text-slate-900"
-                      }`}>
+                      <h3
+                        className={`text-lg font-bold font-mono group-hover:text-cyan-400 transition-colors leading-snug ${
+                          mode ? "text-white" : "text-slate-900"
+                        }`}
+                      >
                         {project.title}
                       </h3>
                       <p className="text-slate-400 text-xs mt-2 leading-relaxed line-clamp-2">
@@ -319,16 +433,18 @@ const Projects = ({ mode }) => {
             ))}
           </Slider>
         </div>
-
       </div>
 
       {/* Interactive System Architecture Modal */}
       {activeModalProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
-          <div className={`relative w-full max-w-2xl rounded-2xl border p-6 sm:p-8 max-h-[90vh] overflow-y-auto ${
-            mode ? "bg-slate-900 border-cyan-500/30 text-white" : "bg-white border-slate-200 text-slate-900"
-          } shadow-2xl`}>
-            
+          <div
+            className={`relative w-full max-w-2xl rounded-2xl border p-6 sm:p-8 max-h-[90vh] overflow-y-auto ${
+              mode
+                ? "bg-slate-900 border-cyan-500/30 text-white"
+                : "bg-white border-slate-200 text-slate-900"
+            } shadow-2xl`}
+          >
             <button
               onClick={() => setActiveModalProject(null)}
               className="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition-colors"
@@ -354,9 +470,7 @@ const Projects = ({ mode }) => {
             </div>
 
             <div className="space-y-4 my-4 font-sans text-sm text-slate-300">
-              <p className="leading-relaxed">
-                {activeModalProject.summary}
-              </p>
+              <p className="leading-relaxed">{activeModalProject.summary}</p>
 
               <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
                 <h4 className="text-xs font-mono font-bold text-cyan-400 mb-2 flex items-center gap-1.5">
@@ -377,11 +491,15 @@ const Projects = ({ mode }) => {
               <div className="grid grid-cols-2 gap-3 text-xs font-mono">
                 <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
                   <div className="text-slate-400">Key Metric</div>
-                  <div className="text-emerald-400 font-bold text-sm mt-0.5">{activeModalProject.metric}</div>
+                  <div className="text-emerald-400 font-bold text-sm mt-0.5">
+                    {activeModalProject.metric}
+                  </div>
                 </div>
                 <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
                   <div className="text-slate-400">Deployment Status</div>
-                  <div className="text-cyan-400 font-bold text-sm mt-0.5">Production Deployed</div>
+                  <div className="text-cyan-400 font-bold text-sm mt-0.5">
+                    Production Deployed
+                  </div>
                 </div>
               </div>
             </div>
@@ -408,11 +526,9 @@ const Projects = ({ mode }) => {
                 </a>
               )}
             </div>
-
           </div>
         </div>
       )}
-
     </section>
   );
 };

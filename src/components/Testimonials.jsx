@@ -24,7 +24,7 @@ const Testimonials = ({ mode }) => {
       rating: 5,
       system: "Enterprise RAG & Hybrid Vector Search",
       message:
-        "Muhammad Usman engineered our enterprise RAG retrieval pipeline with zero downtime. His expertise in vector embeddings, Pinecone index tuning, and Cohere reranking dropped our search latency by 65% while virtually eliminating LLM hallucinations. He is an extraordinary AI Software Engineer."
+        "Muhammad Usman engineered our enterprise RAG retrieval pipeline with zero downtime. His expertise in vector embeddings, Pinecone index tuning, and Cohere reranking dropped our search latency by 65% while virtually eliminating LLM hallucinations. He is an extraordinary AI Software Engineer.",
     },
     {
       pic: pic2,
@@ -33,7 +33,7 @@ const Testimonials = ({ mode }) => {
       rating: 5,
       system: "Multi-Agent Swarm (LangGraph & CrewAI)",
       message:
-        "Working with Usman was transformational for our AI startup. He built a production-grade multi-agent reasoning swarm that handles complex customer support triage and automated reporting. His code quality, architectural depth, and communication are second to none."
+        "Working with Usman was transformational for our AI startup. He built a production-grade multi-agent reasoning swarm that handles complex customer support triage and automated reporting. His code quality, architectural depth, and communication are second to none.",
     },
     {
       pic: pic1,
@@ -42,29 +42,31 @@ const Testimonials = ({ mode }) => {
       rating: 5,
       system: "FastAPI & React Generative Streaming UI",
       message:
-        "Usman delivered our clinical analytics dashboard and generative AI copilot well ahead of schedule. The streaming interface is blazing fast, and the backend error resilience is rock solid. Looking forward to our next collaboration!"
-    }
+        "Usman delivered our clinical analytics dashboard and generative AI copilot well ahead of schedule. The streaming interface is blazing fast, and the backend error resilience is rock solid. Looking forward to our next collaboration!",
+    },
   ];
 
   return (
     <section className="py-24 relative overflow-hidden" id="testimonials">
-      
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-[92%] max-w-5xl mx-auto relative z-10">
-        
         {/* Section Heading */}
         <div className="text-center pb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
             <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
             <span>Client Endorsements</span>
           </div>
-          <h2 className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}>
-            Validated <span className="gradient-text-ai">Engineering Impact</span>
+          <h2
+            className={`titles text-4xl sm:text-5xl font-bold tracking-tight ${mode ? "text-white" : "text-slate-900"}`}
+          >
+            Validated{" "}
+            <span className="gradient-text-ai">Engineering Impact</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-            What founders, engineering executives, and tech leads say about partnering on AI software projects.
+            What founders, engineering executives, and tech leads say about
+            partnering on AI software projects.
           </p>
         </div>
 
@@ -100,7 +102,10 @@ const Testimonials = ({ mode }) => {
                   {/* Star Rating */}
                   <div className="flex items-center gap-1 my-6 text-amber-400 text-lg">
                     {[...Array(val.rating)].map((_, sIdx) => (
-                      <BiSolidStar key={sIdx} className="drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
+                      <BiSolidStar
+                        key={sIdx}
+                        className="drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"
+                      />
                     ))}
                   </div>
 
@@ -115,7 +120,9 @@ const Testimonials = ({ mode }) => {
                     </div>
 
                     <div>
-                      <h4 className={`text-lg font-bold font-mono ${mode ? "text-white" : "text-slate-900"}`}>
+                      <h4
+                        className={`text-lg font-bold font-mono ${mode ? "text-white" : "text-slate-900"}`}
+                      >
                         {val.name}
                       </h4>
                       <p className="text-xs font-mono text-cyan-400">
@@ -123,13 +130,11 @@ const Testimonials = ({ mode }) => {
                       </p>
                     </div>
                   </div>
-
                 </div>
               </div>
             ))}
           </Slider>
         </div>
-
       </div>
     </section>
   );
