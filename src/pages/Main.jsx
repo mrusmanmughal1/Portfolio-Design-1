@@ -7,30 +7,30 @@ import Loader from "../components/Loader";
 import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import  {ModeContext}  from "../Context/ModeContext";
+import AiPlayground from "../components/AiPlayground";
+import { ModeContext } from "../Context/ModeContext";
 import Testimonials from "../components/Testimonials";
 
 const Main = () => {
-const {mode} = useContext(ModeContext);
+  const { mode } = useContext(ModeContext);
 
   return (
-    <>
-      <div className="  overflow-hidden">
-        <div className="md:w-[90%] sm:w-[100%] mx-auto ">
-          <HeaderMain  />
-          <div id={`${mode ? "dark" :''}` }>
-          <Aboutme mode={mode} />
-          <Skills mode={mode} />
-          <Services mode={mode}/>
-          <Projects  mode={mode}/>
-          <Testimonials mode={mode}/>
-          <ContactForm  mode={mode}/>
-          <Footer />
-          </div>
-          <Loader />
-        </div>
-      </div>
-    </>
+    <div className={`min-h-screen transition-colors duration-500 overflow-x-hidden ${
+      mode ? "dark bg-[#050814] text-slate-100" : "bg-slate-50 text-slate-800"
+    } neural-grid-bg`}>
+      <Loader />
+      <HeaderMain />
+      <main className="relative z-10">
+        <Aboutme mode={mode} />
+        <AiPlayground mode={mode} />
+        <Skills mode={mode} />
+        <Services mode={mode} />
+        <Projects mode={mode} />
+        <Testimonials mode={mode} />
+        <ContactForm mode={mode} />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

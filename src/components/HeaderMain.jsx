@@ -1,17 +1,19 @@
 import { useContext } from "react";
-import Header from "./Header"
-import Main from "./Main"
+import Header from "./Header";
+import Main from "./Main";
 import { ModeContext } from "../Context/ModeContext";
 
 const HeaderMain = () => {
-const {mode} = useContext(ModeContext);
+  const { mode } = useContext(ModeContext);
 
   return (
-    <div className={`${mode ? "darkmode text-white  md:h-screen  h-auto   " :"header-main md:h-screen  h-auto  "}`}>
-    <Header mode={mode}/>
-    <Main mode={mode}/>
+    <div className="relative w-full min-h-screen flex flex-col">
+      <Header mode={mode} />
+      <div className="flex-grow flex items-center">
+        <Main mode={mode} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeaderMain
+export default HeaderMain;
